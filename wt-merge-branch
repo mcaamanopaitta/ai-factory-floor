@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+"""
+wt-merge-branch command
+Merges a branch into its parent with automatic cleanup
+"""
+
+import sys
+import os
+from pathlib import Path
+
+# Add the directory containing the script to Python path
+script_dir = Path(__file__).parent
+sys.path.insert(0, str(script_dir))
+
+# Import and run the command
+from wt_commands import wt_merge_branch
+
+if __name__ == "__main__":
+    wt_merge_branch()
