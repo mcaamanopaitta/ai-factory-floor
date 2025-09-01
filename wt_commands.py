@@ -26,6 +26,8 @@ def wt_merge_branch():
                        help="Skip pushing changes to remote")
     parser.add_argument("--preview", action="store_true",
                        help="Preview changes before merge")
+    parser.add_argument("--force", action="store_true",
+                       help="Force merge even if conflicts are detected")
     
     args = parser.parse_args()
     
@@ -36,7 +38,8 @@ def wt_merge_branch():
         args.branch, 
         cleanup=not args.no_cleanup, 
         preview=args.preview,
-        push=not args.no_push
+        push=not args.no_push,
+        force=args.force
     )
     
     sys.exit(0 if success else 1)
