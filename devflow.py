@@ -2,6 +2,8 @@
 """
 DevFlow TUI - AI Factory Floor Workflow Manager
 A terminal UI for managing git worktrees, AI agents, and development workflows.
+
+Note: This file provides enhanced workflow management capabilities for AI-driven development.
 """
 
 import subprocess
